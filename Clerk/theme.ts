@@ -1,0 +1,53 @@
+import { dark } from "@clerk/themes";
+import styles from "./clerkStyles.module.scss";
+
+const appearance = {
+  baseTheme: dark,
+  variables: {
+    colorPrimary: "hsl(144, 90%, 33%)",
+    colorBackground: "hsla(188, 63%, 12%)",
+    colorInputBackground: "hsla(178, 77%, 18%, 0.3)",
+    colorDanger: "hsl(357, 60%, 49%)",
+    colorWarning: "hsl(46, 85%, 57%)",
+    colorSuccess: "hsl(144, 90%, 33%)",
+    fontSize: "1em",
+    borderRadius: "0.3em",
+  },
+  layout: {
+    unsafe_disableDevelopmentModeWarnings: true,
+    shimmer: false,
+  },
+  elements: {
+    rootBox: styles.rootBox,
+    cardBox: styles.cardBox,
+    card: styles.card,
+    headerTitle: styles.headerTitle,
+    headerSubtitle: styles.headerSubtitle,
+    main: styles.main,
+    button: styles.button,
+    socialButtons: styles.socialButtons,
+    socialButtonsBlockButton: styles.socialButtonsBlockButton,
+    socialButtonsBlockButtonText: styles.socialButtonsBlockButtonText,
+    formButtonPrimary: styles.formButtonPrimary,
+    formFieldLabel: styles.formFieldLabel,
+    formFieldInput: styles.formFieldInput,
+    formFieldRow: styles.formFieldRow,
+    dividerLine: styles.dividerLine,
+    dividerText: styles.dividerText,
+    footer: styles.footer,
+    modalBackdrop: styles.modalBackdrop,
+    modalContent: styles.modalContent,
+    navbar: styles.navbar,
+    avatarBox: styles.avatarBox,
+    userButtonTrigger: styles.userButtonTrigger,
+    userButtonAvatarBox: styles.userButtonAvatarBox,
+    userButtonPopoverCard: styles.userButtonPopoverCard,
+    userPreviewAvatarBox: styles.userPreviewAvatarBox,
+    userPreviewSecondaryIdentifier: styles.userPreviewSecondaryIdentifier,
+    userPreviewMainIdentifier: styles.userPreviewMainIdentifier,
+    userButtonPopoverActions: styles.userButtonPopoverActions,
+    userButtonPopoverActionItemIcon: styles.userButtonPopoverActionItemIcon,
+    userButtonPopoverFooter: styles.userButtonPopoverFooter,
+  },
+};
+export default appearance;

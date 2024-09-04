@@ -1,0 +1,186 @@
+@import "../../shared/mixins/responsive";
+
+.authLayout {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: calc(100vh - 5rem);
+  margin-inline: auto;
+  position: relative;
+}
+.rootBox {
+  width: 100%;
+  height: fit-content;
+  // align-items: center;
+}
+.card,
+.cardBox,
+.socialButtonsBlockButton {
+  box-shadow: none;
+}
+.cardBox {
+  width: 100%;
+  max-width: 40rem;
+  margin-inline: auto;
+}
+.card {
+  gap: 4rem;
+  padding-block: 3rem 0.5rem;
+  background: var(--secondary-faint-2);
+}
+
+.headerTitle {
+  font-family: var(--font-h);
+  color: var(--primary-text);
+  font-size: var(--fs-h2);
+}
+.headerSubtitle {
+  margin-top: 0.5rem;
+  font-size: var(--fs-p);
+  color: var(--secondary-text);
+}
+.main {
+  gap: 1rem;
+}
+.socialButtons,
+.formFieldRow {
+  @include mq-sm {
+    width: 80%;
+    place-self: center;
+  }
+}
+.formFieldRow:not(:first-child) {
+  margin-top: -1rem;
+}
+.formFieldInput {
+  padding-block: var(--pb-input);
+  padding-inline: var(--pi-input);
+}
+.socialButtonsBlockButton {
+  outline: 1px solid var(--primary);
+  padding-block: var(--pb-input);
+  padding-inline: var(--pi-input);
+  transition: scale 0.3s var(--transition-tf);
+
+  &:hover:not(:disabled) {
+    scale: 0.95;
+    background: var(--primary-faint);
+  }
+}
+.socialButtonsBlockButtonText {
+  color: var(--primary);
+  font-weight: bold;
+}
+.formButtonPrimary {
+  background: var(--primary);
+  scale: 1;
+  transition: scale 0.3s var(--transition-tf);
+  width: fit-content;
+  place-self: center;
+  color: var(--primary-text);
+  &:hover {
+    scale: 0.95;
+    background: var(--primary-faint);
+  }
+  &::after {
+    display: none;
+  }
+}
+.dividerLine {
+  background: var(--primary-faint);
+}
+.dividerText,
+.formFieldLabel {
+  color: var(--secondary-text);
+  font-size: var(--fs-p);
+}
+
+.button {
+  font-family: var(--font-h);
+  font-weight: bold;
+  padding-block: var(--pb-input);
+  padding-inline: var(--pi-input);
+}
+.footer {
+  background: var(--secondary-faint-2);
+  margin-top: 0;
+  padding-block: 0.5rem;
+  font-size: var(--fs-p);
+  & > div:nth-child(2) {
+    border-top: none;
+  }
+}
+
+// User controls
+.userButtonTrigger {
+  border-radius: var(--border-radius);
+  background: var(--secondary-faint);
+  padding: 0.25rem;
+}
+.avatarBox {
+  border-radius: var(--border-radius);
+}
+.userButtonAvatarBox {
+  height: 2rem;
+  width: 2rem;
+}
+.userPreviewAvatarBox {
+  height: 3rem;
+  width: 3rem;
+}
+.modalBackdrop {
+  backdrop-filter: blur(10px);
+}
+.navbar {
+  & h1 {
+    font-family: var(--font-h);
+    font-size: var(--fs-h2);
+  }
+}
+.modalContent {
+  & .cardBox {
+    width: 80vw;
+    max-width: 80vw;
+    height: 90vh;
+  }
+}
+.userButtonPopoverCard {
+  width: fit-content;
+}
+
+.userPreviewSecondaryIdentifier {
+  font-size: var(--fs-p);
+  color: var(--secondary-text);
+}
+.userPreviewMainIdentifier {
+  font-size: var(--fs-h3);
+  font-weight: bold;
+}
+
+.userButtonPopoverActions {
+  padding-bottom: 0.5rem;
+  & > button {
+    font-family: var(--font-b);
+    font-weight: normal;
+    padding: 0.5rem 1rem;
+    color: var(--primary-text);
+    font-size: var(--fs-p);
+    gap: 0.75rem;
+    text-align: left;
+    border: none;
+    &:hover {
+      color: var(--secondary-text);
+      background: var(--secondary-faint);
+    }
+    & > span {
+      flex: 0 0 var(--fs-h3);
+      opacity: 0.5;
+    }
+  }
+}
+.userButtonPopoverActionItemIcon {
+  opacity: 0.5;
+}
+.userButtonPopoverFooter {
+  display: none;
+}
